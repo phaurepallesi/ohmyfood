@@ -5,22 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Oh My Food</title>
     <script src="https://kit.fontawesome.com/adfa1672f9.js" crossorigin="anonymous"></script>    
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <body id="homepage">
-        <!-- LOADER -->
-        <div class="loader"></div>
-        <!-- HEADER  -->
-        <header>
-            <h1>ohmyfood</h1>
-            <!-- LOCATION -->
-            <div class="location">
-                <i class="fa-solid fa-location-dot"></i>
-                <h2>Paris, Belleville</h2>
+<body id="homepage">    
+    <!-- LOADER -->
+    <div class="loader"></div>
+    <!-- HEADER  -->
+    <header class="header center-both">
+        <h1 class="header__logo">ohmyfood</h1>
+        <!-- LOCATION -->
+        <div class="header__location">
+            <i class="fa-solid fa-location-dot header__location--map"></i>
+            <input type="text" class="header__location--search" placeholder="Paris, Belleville">            
+        </div>
+        <!-- LOCATION -->
+    </header>
+    <!-- HEADER  -->
+
+    <main>
+        <!-- EXPLORER  -->    
+        <section class="explorer">
+            <h2>Réservez le menu qui <br>vous convient</h2>
+            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+            <button>Explorer nos restaurants</button>
+            <div class="gradient">
+    
             </div>
-            <!-- LOCATION -->
-        </header>
-        <!-- HEADER  -->
+        </section>
+        <!-- EXPLORER  -->
+
+        <!-- TUTO  -->    
+        <section class="tuto">
+            <h2>Fonctionnement</h2>
+            <ol>
+                <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                <li><i class="fas fa-list-ul"></i>Composez votre menu</li>
+                <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
+            </ol>
+        </section>
+        <!-- TUTO  -->
+
+        <!-- MENUS -->
+        <section class="menus">
+            <h2>Restaurants</h2>
+            <div class="menus__cards">
+                <a href="./pages/la-palette-du-gout.html" class="card new">
+                <div class="card__image card__image-1"></div>
+                <div class="card__description">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                </div>
+                </a>
+                <a href="./pages/resto-2.html" class="card new">
+                <div class="card__image card__image-2"></div>
+                <div class="card__description">
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                </div>
+                </a>
+                <a href="./pages/resto-3.html" class="card">
+                <div class="card__image card__image-3"></div>
+                <div class="card__description">
+                    <h3>À la française</h3>
+                    <p>Cité Rouge</p>
+                </div>
+                </a>
+                <a href="./pages/resto-4.html" class="card">
+                <div class="card__image card__image-4"></div>
+                <div class="card__description">
+                    <h3>Le Délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                </div>
+                </a>
+            </div>
+            </section>
+    </main>
+
+    <!-- FOOTER  -->    
+    <footer>
+        <h2>ohmyfood</h2>
+        <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
+        <p><i class="fas fa-hands-helping"></i>Devenir partenaire</p>
+        <p>Mentions légales</p>
+        <p><a href="mailto:benoit.mrejen@gmail.com">Contact</a></p>
+    </footer>
+    <!-- FOOTER  -->
+
 </body>
 </html>
