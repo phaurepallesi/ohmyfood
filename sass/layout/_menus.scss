@@ -39,11 +39,23 @@
                 background-position: center;
             }
 
-            @for $i from 1 through 4 {
-                &__image-#{$i} {
-                    background-image: url("/assets/images/restaurants/menu-#{$i}.jpg");
-                }
+            
+            &__image-1 {
+                background-image: url("/assets/images/restaurants/menu-1.jpg");
             }
+
+            &__image-2 {
+                background-image: url("/assets/images/restaurants/menu-2.jpg");
+            }
+
+            &__image-3 {
+                background-image: url("/assets/images/restaurants/menu-3.jpg");
+            }
+
+            &__image-4 {
+                background-image: url("/assets/images/restaurants/menu-4.jpg");
+            }
+            
             
             &__description {
                 @include mixins.heart-animated;

@@ -405,6 +405,13 @@ main {
   font-size: 1rem;
 }
 
+.header__city--search {
+  font-family: "Roboto", sans-serif;
+  background-color: #f3f3f3;
+  border: transparent;
+  font-style: normal;
+}
+
 .explorer {
   text-align: center;
   margin: 2rem;
