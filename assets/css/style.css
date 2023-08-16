@@ -347,7 +347,7 @@ a {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: disappear 200ms 3s forwards;
+  animation: disappear 100ms 1s forwards;
   transform-origin: top;
 }
 .loader::after {
@@ -355,10 +355,10 @@ a {
   height: 100px;
   width: 100px;
   border-right: 5px solid transparent;
-  border-top: 5px solid #9356dc;
+  border-top: 5px solid #99e2d0;
   border-radius: 50%;
   animation: spin 1s ease-in-out;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
 }
 
 @keyframes disappear {
@@ -371,7 +371,7 @@ a {
     transform: rotate(360deg);
   }
 }
-header {
+header nav {
   font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
@@ -385,7 +385,7 @@ main {
 }
 @media (max-width: 1000px) {
   main {
-    padding: 0 1rem;
+    padding: 0;
   }
 }
 
@@ -443,8 +443,11 @@ main {
 }
 
 .tuto {
+  width: 100%;
   counter-reset: steps;
+  background-color: white;
   margin-bottom: 2rem;
+  padding: 1rem;
 }
 .tuto ol {
   display: flex;

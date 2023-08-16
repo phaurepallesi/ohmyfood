@@ -3,8 +3,11 @@
 @use "../utils/variables";
 
 .tuto {
+  width: 100%;
   counter-reset: steps;
+  background-color: white;
   margin-bottom: 2rem;
+  padding: 1rem;
   & ol {
     display: flex;
     gap: 2rem;
