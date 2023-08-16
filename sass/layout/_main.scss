@@ -1,0 +1,30 @@
+// .layout {
+//     width: 360px;
+//     height: 800px;
+//     display: grid;
+//     grid:
+//     "header" 113px
+//     "main" auto
+//     "footer" 186px
+//     / 1fr;
+//     grid-auto-flow: column;
+// }
+
+// .header {
+//     grid-area: header;
+// }
+
+// .main {
+//     grid-area: main;
+// }
+
+// .footer {
+//     grid-area: footer;
+// }
+
+main {
+    padding: 0 7rem;
+    @media (max-width: 1000px) {
+    padding: 0 1rem;
+    }
+}

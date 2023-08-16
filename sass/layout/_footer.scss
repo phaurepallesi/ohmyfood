@@ -1,0 +1,20 @@
+// _footer.scss
+
+@use "../base/colors";
+
+footer {
+  background-color: colors.$darkgrey;
+  padding: 1rem 2rem;
+  color: white;
+  h2 {
+    font-family: "Shrikhand", "sans-serif";
+    font-weight: 500;
+    padding: 1rem 0;
+  }
+  p {
+    padding: 0.2rem;
+  }
+}
+  
+  // ... add more footer styles if needed ...
+  
