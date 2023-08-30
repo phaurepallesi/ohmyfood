@@ -1,56 +1,94 @@
-@use "../base/colors";
-@use "../utils/mixins";
-@use "../utils/variables";
-
 .tuto {
-  width: 100%;
-  counter-reset: steps;
-  background-color: white;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  & ol {
+    width: 100%;
     display: flex;
-    gap: 2rem;
-    @media (max-width: variables.$breakpoint) {
-      flex-direction: column;
+    flex-direction: column;
+    justify-content: center;        
+    counter-reset: steps;
+    background-color: $white;
+    box-sizing: border-box;
+    padding: 48px 0 68px 0;
+    
+    @media (min-width: $breakpoint) {
+        gap: 25px;
+        margin: 0;
+        padding: 50px 180px;
     }
-  }
-  & li {
-    position: relative;
-    display: flex;
-    align-items: center;
-    &::before {
-      content: counter(steps);
-      counter-increment: steps;
-      color: white;
-      background-color: colors.$purple;
-      width: 2 * variables.$tuto-bullet-height;
-      height: 2 * variables.$tuto-bullet-height;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      left: -1 * variables.$tuto-bullet-height;
-      transform: translateY(-50%);
+
+    & h2 {
+        font-size: 24px;
+        margin-left: 20px;
+        @media (min-width: $breakpoint) {
+            padding: 0;
+            margin: 0;            
+        }
     }
-    list-style-type: none;
-    background-color: #f6f6f6;
-    padding: 1.5rem 2rem;
-    flex-grow: 1;
-    border-radius: 1rem;
-    @include mixins.box-shadow;
-    &:hover {
-      @include mixins.transform-zoom;
-      background-color: lighten(colors.$purple, 35%);
-      i::before {
-        color: colors.$purple;
-      }
+
+    & ol {        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24.94px;        
+        padding: 0 20px 0 32.51px;
+        @media (min-width: $breakpoint) {
+            width: 100%;            
+            flex-direction: row;
+            justify-content: center;
+            padding: 0;
+        }
     }
-    & i.fas {
-      margin-right: 1rem;
-      color: colors.$lightgrey;
-      font-size: 1.5rem;
+
+    & li {
+        width: 100%;                       
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 28.59px 38px 28.12px 73.49px;
+        cursor: pointer;        
+
+        & p {
+            width: 100%;            
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            padding: 0;
+        }
+
+        &::before {
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: $color-primary;
+            width: 2 * $tuto-bullet-height;
+            height: 2 * $tuto-bullet-height;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -1 * $tuto-bullet-height;
+            transform: translateY(-50%);
+        }
+
+        list-style-type: none;
+        background-color: $gray-light;        
+        
+        border-radius: 20px;
+        @include box-shadow;
+
+        &:hover {
+            @include transform-zoom;
+            background-color: lighten($gray-light, 0%);
+            i::before {
+            color: $color-primary;
+            }
+        }
+        & i.fas {
+            position: absolute;
+            left: 33.47px;
+            top: 24.54px;
+            color: $gray;
+            font-size: 24px;            
+        }
     }
-  }
 }

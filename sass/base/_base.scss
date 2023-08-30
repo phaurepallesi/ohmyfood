@@ -1,12 +1,59 @@
-*,
+main,
 ::before,
 ::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
+    max-width: 100%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;     
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 
+
+// body {
+//     font-family: 'Roboto', sans-serif;
+//     line-height: 1.2;
+//     color: #000;
+//     max-width: 1440px;
+//     margin: 0;
+// }
+
+// section {
+//     @extend %container;
+// }
+
+// h2 {
+//     font-size: rem(25);
+//     font-weight: 900;
+//     margin-bottom: rem(20);
+// }
+
+// a {
+//     color: inherit;
+//     text-decoration: none;
+//     cursor: pointer;
+//     @include transition-ease;
+// }
+
+// button {
+//     cursor: pointer;
+//     border: none;
+//     background: none;
+//     padding: 0;
+// }
+
+// :focus {
+//     outline: none;
+// }
+
+// body {
+//     height: 100ev;
+//     margin: 0;
+// }

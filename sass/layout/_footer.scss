@@ -1,20 +1,70 @@
-// _footer.scss
+// // _footer.scss
 
-@use "../base/colors";
+// footer {
+//   background-color: colors.$darkgrey;
+//   padding: 1rem 2rem;
+//   color: white;
+//   h2 {
+//     font-family: "Shrikhand", "sans-serif";
+//     font-weight: 500;
+//     padding: 1rem 0;
+//   }
+//   p {
+//     padding: 0.2rem;
+//   }
+// }
+  
+//   // ... add more footer styles if needed ...
+  
 
-footer {
-  background-color: colors.$darkgrey;
-  padding: 1rem 2rem;
-  color: white;
-  h2 {
-    font-family: "Shrikhand", "sans-serif";
-    font-weight: 500;
-    padding: 1rem 0;
-  }
-  p {
-    padding: 0.2rem;
-  }
+footer { 
+    height: 142px;  
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: $white;
+    @media (min-width: $breakpoint) {
+        height: 54px;        
+        flex-direction: row-reverse;
+        align-items: flex-end;
+    } 
 }
-  
-  // ... add more footer styles if needed ...
-  
+
+.footer {        
+    background-color: $black;
+    padding: 22px 25px 22px 25px;
+    @media (min-width: $breakpoint) {        
+        padding: 30px 25px 30px 25px;
+    }
+
+    &__logo {                
+        font-family: 'Shrikhand';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        font-family: 'roboto';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        padding: 0;
+        gap: 7px;
+        @media (min-width: $breakpoint) {        
+            flex-direction: row;
+
+        }
+    
+        &__link {
+            display: flex; 
+            gap: 11px;
+        }
+    }
+    
+}
+

@@ -1,68 +1,97 @@
-@use "../base/colors";
-@use "../utils/variables";
-@use "../utils/mixins";
-
-#homepage {
-    .menus {
-        background-color: #f6f6f6;
-        margin-bottom: 2rem;
-
-        .menus__cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            @media (max-width: variables.$breakpoint) {
-                grid-template-columns: repeat(1, 1fr);
-            }
-            .new {
-                position: relative;
-            }
-            .new::before {
-                content: "Nouveau";
-                position: absolute;
-                height: 2rem;
-                width: 5rem;
-                background-color: colors.$color-tertiary;
-                color: darken(colors.$color-tertiary, 50%);
-                display: grid;
-                place-items: center;
-                right: 1rem;
-                top: 1rem;
-            }
-        }
-
-        .card {
-            &__image {
-                height: 15rem;
-                border-radius: 1rem 1rem 0 0;
-                background-size: cover;
-                background-position: center;
-            }
-
-            
-            &__image-1 {
-                background-image: url("/assets/images/restaurants/menu-1.jpg");
-            }
-
-            &__image-2 {
-                background-image: url("/assets/images/restaurants/menu-2.jpg");
-            }
-
-            &__image-3 {
-                background-image: url("/assets/images/restaurants/menu-3.jpg");
-            }
-
-            &__image-4 {
-                background-image: url("/assets/images/restaurants/menu-4.jpg");
-            }
-            
-            
-            &__description {
-                @include mixins.heart-animated;
-                h3, p {
-                    padding: 0.3rem;
-                }
-            }
-        }
+.restaurant {
+  display: flex;
+  flex-direction: column;  
+  background-color: #f8f8f8;
+  padding: 24px 180px;
+  
+    @media (max-width: 1000px) {
+      padding: 24px;
     }
-}
+  
+    & h3 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 24px;
+      padding: 24px 0px 20px 0px;
+    }
+  
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding-bottom: 24px;
+  
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+  
+    .card {
+      box-shadow: 2px 1px 10px -5px black;
+      border-radius: 10px;
+      position: relative;
+  
+      & .new {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        background-color: $color-tertiary;
+        padding: 9px 12px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: $color-tertiary-strong;
+      }
+  
+      & .card-image {
+        height: 180px;
+        width: 100%;        
+        background-size: cover;
+        background-position: bottom;
+        border-radius: 10px 10px 0 0;
+      }
+  
+      & .card-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: $white;
+        color: $black;
+        border-radius: 0 0 10px 10px;
+        padding: 16px;
+        
+  
+        & h5 {
+          
+          font-family: 'Roboto', sans-serif;
+          font-size: 18px;
+        }
+  
+        & p {
+          
+          font-family: 'Roboto', sans-serif;
+          font-size: 18px;
+          padding-top: 3px;
+        }
+      }
+  
+      & .card-image1 {
+        background-image: url(/assets/images/restaurants/menu-1.jpg);
+        object-fit: cover;
+      }
+  
+      & .card-image2 {
+        background-image: url(/assets/images/restaurants/menu-2.jpg);
+        background-position: center;
+      }
+  
+      & .card-image3 {
+        background-image: url(/assets/images/restaurants/menu-3.jpg);
+      }
+  
+      & .card-image4 {
+        background-image: url(/assets/images/restaurants/menu-4.jpg);
+      }
+    }
+  }
+
+  

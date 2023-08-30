@@ -1,40 +1,116 @@
-@use "../utils/mixins";
-@use "../base/colors";
-
-.loader {
-    $animation-duration: 1s;
-    $animation-count: 1;
+// LOADING SPINNER ACCUEIL \\
+.loading-spinner {
     position: fixed;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ffffff;
     height: 100vh;
-    inset: 0;
+    inset: 0px;
     z-index: 1;
     opacity: 0.9;
-    animation: disappear 100ms $animation-duration * $animation-count forwards;
-    transform-origin: top;
-
-    &::after {
-        content: "";
-        height: 100px;
-        width: 100px;
-        border-right: 5px solid transparent;
-        border-top: 5px solid $color-tertiary;
-        border-radius: 50%;
-        animation: spin $animation-duration ease-in-out;
-        animation-iteration-count: $animation-count;
+    animation: loader 1ms forwards;
+    animation-delay: 3s;
+  
+    i {
+      animation: spin 1.5s infinite;
+      color: $color-primary;
     }
-}
-
-@keyframes disappear {
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  
+  @keyframes spin {
     to {
-        transform: scale(0);
+      transform: rotate(360deg);
     }
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+  }
+  
+  // TRANSITION CHECK \\
+  @keyframes spin2 {
+    0% {
+      transform: rotate(-270deg);
     }
-}
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+  // MENU APPARITION \\
+  @keyframes apparition {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .menuitem {
+    animation: apparition 0.5s;
+    animation-fill-mode: both;
+  }
+  .delay-1-1,
+  .delay-2-1,
+  .delay-3-1,
+  .delay-4-1 {
+    animation-delay: 100ms;
+  }
+  .delay-1-2,
+  .delay-2-2,
+  .delay-3-2,
+  .delay-4-2 {
+    animation-delay: 200ms;
+  }
+  .delay-1-3,
+  .delay-2-3,
+  .delay-3-3,
+  .delay-4-3 {
+    animation-delay: 300ms;
+  }
+  .delay-2-4 {
+    animation-delay: 375ms;
+  }
+  .delay-1-4,
+  .delay-2-5,
+  .delay-3-4,
+  .delay-4-4 {
+    animation-delay: 400ms;
+  }
+  .delay-1-5,
+  .delay-2-6,
+  .delay-3-5,
+  .delay-4-5 {
+    animation-delay: 500ms;
+  }
+  .delay-1-6,
+  .delay-2-7,
+  .delay-3-6,
+  .delay-4-6 {
+    animation-delay: 600ms;
+  }
+  .delay-1-7,
+  .delay-2-8,
+  .delay-3-7,
+  .delay-4-7 {
+    animation-delay: 700ms;
+  }
+  .delay-1-8,
+  .delay-2-9,
+  .delay-3-8,
+  .delay-4-8 {
+    animation-delay: 800ms;
+  }
+  .delay-1-9,
+  .delay-2-10,
+  .delay-3-9,
+  .delay-4-9 {
+    animation-delay: 900ms;
+  }
